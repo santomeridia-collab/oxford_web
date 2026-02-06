@@ -1,0 +1,312 @@
+/* Professional Corporate About - WeberFox Style */
+.about-section {
+  background-color: #B2BEB5;
+  /* Ash color background */
+  padding: 4rem 0;
+  /* Added reduced padding to minimize gap */
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+}
+
+/* About Text Section */
+.about-text {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.about-lead {
+  font-size: 1.25rem;
+  color: #2d3748;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  /* Centralized text */
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Feature Grid */
+.about-features {
+  margin: 2.5rem 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3182ce, #2b77cb);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Special styling for Expert Faculty card */
+.feature-card:first-child {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.feature-card:first-child h4 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card:first-child p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.feature-card:first-child::before {
+  background: linear-gradient(90deg, #ffffff, #f7fafc);
+}
+
+.feature-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #718096;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* About Actions */
+.about-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Stats Section */
+.about-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stat-card1 {
+  background: rgba(222, 227, 227, 0.708);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.stat-card1:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.stat-number1 {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3182ce;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label1 {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-description1 {
+  font-size: 0.8rem;
+  color: #718096;
+  line-height: 1.4;
+}
+
+/* Certifications Section */
+.certifications {
+  text-align: center;
+  padding-top: 3rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.certifications h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 2rem;
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.cert-icon {
+  width: 20px;
+  height: 20px;
+  background: #3182ce;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    padding: 0 1rem;
+  }
+
+  .stats-grid1 {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    padding: 1rem;
+  }
+
+  .stats-grid1 {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .about-actions .btn {
+    flex: 1;
+    min-width: 160px;
+  }
+
+  .cert-grid {
+    gap: 1rem;
+  }
+
+  .cert-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    padding: 0.5rem;
+  }
+
+  .about-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-actions .btn {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .stats-grid1 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cert-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

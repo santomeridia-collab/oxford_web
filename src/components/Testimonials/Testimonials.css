@@ -1,0 +1,641 @@
+.testimonials-section {
+  position: relative;
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+}
+
+/* Background Elements */
+.testimonials-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-pattern {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  animation: float 15s ease-in-out infinite;
+}
+
+.pattern-1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.pattern-2 {
+  top: 60%;
+  right: 10%;
+  animation-delay: 5s;
+}
+
+.pattern-3 {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 10s;
+}
+
+/* Section Header */
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.testimonials-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.testimonials-header h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Testimonials Carousel */
+.testimonials-carousel {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5rem;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+  left: -80px;
+}
+
+.carousel-nav.next {
+  right: -80px;
+}
+
+.testimonials-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.testimonials-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-slide {
+  min-width: 100%;
+  padding: 0 1rem;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.quote-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.rating {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.rating .fa-star {
+  color: #ddd;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.rating .fa-star.filled {
+  color: #ffd700;
+}
+
+.testimonial-content {
+  margin-bottom: 2.5rem;
+}
+
+.testimonial-content p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+  font-style: italic;
+  text-align: center;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.author-image {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.author-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.image-border {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 88px;
+  height: 88px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: padding-box;
+  z-index: -1;
+}
+
+.author-info h4 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.author-role {
+  font-size: 1.1rem;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.author-company {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.author-details {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.author-details span {
+  padding: 0.3rem 0.8rem;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.achievement-badge {
+  position: absolute;
+  top: -15px;
+  right: 2rem;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #1a1a1a;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.indicator {
+  width: 60px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.indicator-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.indicator.active .indicator-progress {
+  width: 100%;
+  animation: progress 5s linear;
+}
+
+@keyframes progress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Alumni Stats */
+.alumni-stats {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5rem;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+.stat-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Alumni CTA */
+.alumni-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content {
+  color: white;
+}
+
+.cta-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.network-visualization {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.network-node {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.network-node.main {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 2rem;
+  animation-delay: 0s;
+}
+
+.network-node.node-1 {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0.5s;
+}
+
+.network-node.node-2 {
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  animation-delay: 1s;
+}
+
+.network-node.node-3 {
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 1.5s;
+}
+
+.network-node.node-4 {
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  animation-delay: 2s;
+}
+
+.network-connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.connection {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: flow 4s ease-in-out infinite;
+}
+
+.connection-1 {
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  animation-delay: 0s;
+}
+
+.connection-2 {
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation-delay: 1s;
+}
+
+.connection-3 {
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  transform: translate(-50%, -50%) rotate(90deg);
+  animation-delay: 2s;
+}
+
+.connection-4 {
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  transform: translate(-50%, -50%) rotate(180deg);
+  animation-delay: 3s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes flow {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .carousel-nav.prev {
+    left: -60px;
+  }
+  
+  .carousel-nav.next {
+    right: -60px;
+  }
+  
+  .alumni-cta {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .network-visualization {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 4rem 0;
+  }
+  
+  .carousel-nav {
+    display: none;
+  }
+  
+  .testimonial-card {
+    padding: 2rem;
+  }
+  
+  .testimonial-author {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .achievement-badge {
+    position: static;
+    margin-top: 1rem;
+    align-self: center;
+  }
+  
+  .stats-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .stat-card {
+    padding: 2rem;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+  }
+  
+  .network-visualization {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  
+  .testimonial-content p {
+    font-size: 1.1rem;
+  }
+  
+  .author-details {
+    justify-content: center;
+  }
+  
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .alumni-cta {
+    padding: 2rem;
+  }
+  
+  .cta-content h3 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,98 @@
+.programs-page {
+  min-height: 100vh;
+}
+
+.programs-page-header {
+  background: transparent;
+  padding: 8rem 0 4rem 0;
+  color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+}
+
+.programs-page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(26,26,26,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.programs-page-header .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.page-breadcrumb a {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  font-weight: 500;
+}
+
+.page-breadcrumb a:hover {
+  opacity: 0.7;
+}
+
+.page-breadcrumb span {
+  opacity: 0.6;
+}
+
+.programs-page-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.programs-page-header p {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .programs-page-header {
+    padding: 6rem 0 3rem 0;
+  }
+  
+  .programs-page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .programs-page-header p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs-page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .page-breadcrumb {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

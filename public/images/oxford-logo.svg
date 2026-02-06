@@ -1,0 +1,23 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Oxford Logo Recreation -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4682B4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B2BEB5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rounded rectangle -->
+  <rect x="5" y="5" width="90" height="90" rx="15" ry="15" fill="url(#blueGradient)" stroke="#2E4A6B" stroke-width="2"/>
+  
+  <!-- White background for "O" -->
+  <rect x="15" y="15" width="70" height="45" rx="8" ry="8" fill="white" opacity="0.9"/>
+  
+  <!-- Letter "O" -->
+  <circle cx="50" cy="37.5" r="15" fill="none" stroke="#4682B4" stroke-width="4"/>
+  <circle cx="50" cy="37.5" r="8" fill="none" stroke="#87CEEB" stroke-width="2"/>
+  
+  <!-- "OXFORD" text -->
+  <text x="50" y="80" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">OXFORD</text>
+</svg>
