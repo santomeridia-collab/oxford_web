@@ -13,7 +13,8 @@
     "framer-motion": "^7.6.2",
     "react-intersection-observer": "^9.4.0",
     "swiper": "^8.4.4"
-  },
+  }
+  ,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
